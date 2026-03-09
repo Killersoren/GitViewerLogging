@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36511.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitViewerLogging.Api", "GitViewerLogging.Api\GitViewerLogging.Api.csproj", "{B080A420-19B4-286C-1262-77346BFCADF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitViewerLogging.AppHost", "GitViewerLogging.AppHost\GitViewerLogging.AppHost.csproj", "{DBD4DA6D-7258-41BA-B2C9-A91BBDB45449}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitViewerLogging.ServiceDefaults", "GitViewerLogging.ServiceDefaults\GitViewerLogging.ServiceDefaults.csproj", "{9C142730-5AED-1517-B23A-0E41A10776FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitViewerLogging.DataAccess", "GitViewerLogging.DataAccess\GitViewerLogging.DataAccess.csproj", "{62C8ED7F-67A1-4ED9-936E-21F27D980507}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitViewerLogging.MigrationService", "MigrationService\GitViewerLogging.MigrationService.csproj", "{33C31411-3ED1-6C91-4919-4D2E66530DE7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B080A420-19B4-286C-1262-77346BFCADF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B080A420-19B4-286C-1262-77346BFCADF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B080A420-19B4-286C-1262-77346BFCADF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B080A420-19B4-286C-1262-77346BFCADF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBD4DA6D-7258-41BA-B2C9-A91BBDB45449}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBD4DA6D-7258-41BA-B2C9-A91BBDB45449}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBD4DA6D-7258-41BA-B2C9-A91BBDB45449}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBD4DA6D-7258-41BA-B2C9-A91BBDB45449}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C142730-5AED-1517-B23A-0E41A10776FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C142730-5AED-1517-B23A-0E41A10776FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C142730-5AED-1517-B23A-0E41A10776FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C142730-5AED-1517-B23A-0E41A10776FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62C8ED7F-67A1-4ED9-936E-21F27D980507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62C8ED7F-67A1-4ED9-936E-21F27D980507}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62C8ED7F-67A1-4ED9-936E-21F27D980507}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62C8ED7F-67A1-4ED9-936E-21F27D980507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33C31411-3ED1-6C91-4919-4D2E66530DE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33C31411-3ED1-6C91-4919-4D2E66530DE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33C31411-3ED1-6C91-4919-4D2E66530DE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33C31411-3ED1-6C91-4919-4D2E66530DE7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DDBA47D1-E352-4D92-8638-29AC0BCFEC59}
+	EndGlobalSection
+EndGlobal
