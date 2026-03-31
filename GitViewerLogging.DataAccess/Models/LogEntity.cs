@@ -18,5 +18,6 @@
 
         // Other stuff
         public string? Details { get; set; }
+        public Guid? ShareLink { get; set; } // Used if a share link was involved in the event
     }
 }
