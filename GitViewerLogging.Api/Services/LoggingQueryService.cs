@@ -31,5 +31,29 @@ namespace GitViewerLogging.Services
                 )
                 .OrderByDescending(log => log.TimeStamp)
                 .ToListAsync();
+
+        public async Task<IEnumerable<LogEntity>> GetUserShareLinkVisitorLogsAsync(Guid userId, Guid shareLinkId) =>
+             await _context.LogEntities
+                .Where(log =>
+                    (log.IsAnonymous ?? false) &&
+                    log.Details == $"RepositoryOwner:{userId}" &&
+                    log.ShareLink == shareLinkId &&
+                    log.EventType == "RepositoryViewed" &&
+                    log.TimeStamp >= DateTime.UtcNow.AddDays(-LookbackDays)
+                )
+                .OrderByDescending(log => log.TimeStamp)
+                .ToListAsync();
+
+        public async Task<IEnumerable<LogEntity>> GetShareLinkVisitorLogsAsync(Guid userId, Guid shareLinkId) =>
+            await _context.LogEntities
+                .Where(log =>
+                    (log.IsAnonymous ?? false) &&
+                    log.Details == $"ShareLinkOwner:{userId}" &&
+                    log.ShareLink == shareLinkId &&
+                    log.EventType == "ShareLinkViewed" &&
+                    log.TimeStamp >= DateTime.UtcNow.AddDays(-LookbackDays)
+                )
+                .OrderByDescending(log => log.TimeStamp)
+                .ToListAsync();
     }
 }

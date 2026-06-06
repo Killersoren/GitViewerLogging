@@ -42,6 +42,42 @@ namespace GitViewerLogging.Controllers
             return Ok(logs);
         }
 
+        [Authorize(Roles = "User, Admin")]
+        [HttpGet("get-repo-visitor-logs-with-sharelink")]
+        public async Task<ActionResult<IEnumerable<LogEntity>>> GetUserShareLinkVisitorLogs(Guid shareLinkId)
+        {
+            var userId = GetUserId();
+            if (userId is null)
+            {
+                return Unauthorized();
+            }
+
+            if (shareLinkId == Guid.Empty)
+            {
+                return BadRequest("Share link ID is required.");
+            }
+
+            var logs = await _queryService.GetUserShareLinkVisitorLogsAsync(userId.Value, shareLinkId);
+            return Ok(logs);
+        }
+
+        [Authorize(Roles = "User, Admin")]
+        [HttpGet("get-sharelink-visitor-logs")]
+        public async Task<ActionResult<IEnumerable<LogEntity>>> GetShareLinkVisitorLogs(Guid shareLinkId)
+        {
+            var userId = GetUserId();
+            if (userId is null)
+            {
+                return Unauthorized();
+            }
+            if (shareLinkId == Guid.Empty)
+            {
+                return BadRequest("Share link ID is required.");
+            }
+            var logs = await _queryService.GetShareLinkVisitorLogsAsync(userId.Value, shareLinkId);
+            return Ok(logs);
+        }
+
         private Guid? GetUserId()
         {
             var claim = User.FindFirst(ClaimTypes.NameIdentifier);
