@@ -44,7 +44,7 @@ namespace GitViewerLogging.RabbitMQ
 
             await _channel.QueueDeclareAsync(
                 queue: "logs",
-                durable: false,
+                durable: true,
                 exclusive: false,
                 autoDelete: false,
                 arguments: null
